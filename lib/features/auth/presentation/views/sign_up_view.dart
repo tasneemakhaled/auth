@@ -5,6 +5,6 @@ class SignUpView extends StatelessWidget {
   static const routeName = 'sign up';
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }

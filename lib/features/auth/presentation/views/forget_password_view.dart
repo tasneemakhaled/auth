@@ -5,6 +5,6 @@ class ForgetPasswordView extends StatelessWidget {
   static const routeName = 'forget password';
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
