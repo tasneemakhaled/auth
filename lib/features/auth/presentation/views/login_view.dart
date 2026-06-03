@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/presentation/views/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -5,6 +6,6 @@ class LoginView extends StatelessWidget {
   static const routeName = 'login';
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(body: LoginViewBody());
   }
 }

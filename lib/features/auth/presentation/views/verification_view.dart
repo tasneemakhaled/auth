@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/presentation/views/widgets/verofication_view_body.dart';
 import 'package:flutter/material.dart';
 
 class VerificationView extends StatelessWidget {
@@ -5,6 +6,6 @@ class VerificationView extends StatelessWidget {
   static const routeName = 'verification view';
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(body: VeroficationViewBody());
   }
 }

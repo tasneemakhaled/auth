@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/presentation/views/widgets/reset_password_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -5,6 +6,6 @@ class ResetPasswordView extends StatelessWidget {
   static const routeName = 'reset password';
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(body: ResetPasswordViewBody());
   }
 }

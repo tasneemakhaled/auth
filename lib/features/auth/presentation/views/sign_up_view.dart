@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/presentation/views/widgets/sign_up_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpView extends StatelessWidget {
@@ -5,6 +6,6 @@ class SignUpView extends StatelessWidget {
   static const routeName = 'sign up';
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(backgroundColor: Colors.white, body: SignUpViewBody());
   }
 }
