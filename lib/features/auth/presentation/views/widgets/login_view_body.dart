@@ -1,4 +1,5 @@
 import 'package:auth/core/utils/constants/app_colors.dart';
+import 'package:auth/features/auth/presentation/views/forget_password_view.dart';
 import 'package:auth/features/auth/presentation/views/widgets/custom_button.dart';
 import 'package:auth/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:auth/features/auth/presentation/views/widgets/password_field.dart';
@@ -29,6 +30,16 @@ class LoginViewBody extends StatelessWidget {
             CustomTextField(hintText: 'Email/Phone Number'),
             SizedBox(height: 16),
             PasswordField(),
+            SizedBox(height: 16),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, ForgetPasswordView.routeName);
+              },
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: Text('Forget Password?'),
+              ),
+            ),
             SizedBox(height: 16),
             CustomButton(text: 'Log In', onPressed: () {}),
             SizedBox(height: 16),

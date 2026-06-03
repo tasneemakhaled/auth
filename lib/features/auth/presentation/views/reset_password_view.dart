@@ -6,6 +6,9 @@ class ResetPasswordView extends StatelessWidget {
   static const routeName = 'reset password';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ResetPasswordViewBody());
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: ResetPasswordViewBody(),
+    );
   }
 }

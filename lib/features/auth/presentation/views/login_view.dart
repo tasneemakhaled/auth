@@ -6,6 +6,6 @@ class LoginView extends StatelessWidget {
   static const routeName = 'login';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: LoginViewBody());
+    return Scaffold(backgroundColor: Colors.white, body: LoginViewBody());
   }
 }
