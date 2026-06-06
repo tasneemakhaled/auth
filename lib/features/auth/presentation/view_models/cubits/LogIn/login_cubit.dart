@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/domain/entites/user_entity.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
