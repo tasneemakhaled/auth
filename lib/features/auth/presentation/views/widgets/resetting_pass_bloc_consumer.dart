@@ -1,6 +1,7 @@
 import 'package:auth/features/auth/presentation/view_models/cubits/ForgetPassword/forget_password_cubit.dart';
 import 'package:auth/features/auth/presentation/views/login_view.dart';
 import 'package:auth/features/auth/presentation/views/reset_password_view.dart';
+import 'package:auth/features/auth/presentation/views/widgets/reset_password_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -30,7 +31,7 @@ class ResettingPassBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return ModalProgressHUD(
           inAsyncCall: state is ForgetPasswordLoading,
-          child: ResetPasswordView(),
+          child: ResetPasswordViewBody(),
         );
       },
     );
