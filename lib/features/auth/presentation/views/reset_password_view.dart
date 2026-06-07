@@ -1,4 +1,5 @@
 import 'package:auth/features/auth/presentation/views/widgets/reset_password_view_body.dart';
+import 'package:auth/features/auth/presentation/views/widgets/resetting_pass_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -8,7 +9,7 @@ class ResetPasswordView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ResetPasswordViewBody(),
+      body: ResettingPassBlocConsumer(),
     );
   }
 }

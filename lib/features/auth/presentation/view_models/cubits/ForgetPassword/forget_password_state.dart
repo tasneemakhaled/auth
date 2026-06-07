@@ -17,7 +17,6 @@ class VerifyOtpSuccess extends ForgetPasswordState {}
 class ResetPasswordSuccess extends ForgetPasswordState {}
 
 final class ForgetPasswordFailure extends ForgetPasswordState {
-  // ← was missing
   final String errorMessage;
   ForgetPasswordFailure({required this.errorMessage});
 }

@@ -27,7 +27,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => SignUpCubit(getIt.get<AuthRepo>())),
         BlocProvider(create: (context) => LoginCubit(getIt.get<AuthRepo>())),
-        BlocProvider(create: (context) => ForgetPasswordCubit()),
+        BlocProvider(
+          create: (context) => ForgetPasswordCubit(getIt.get<AuthRepo>()),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

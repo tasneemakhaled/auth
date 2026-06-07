@@ -35,6 +35,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   get_it: ^9.2.1
   modal_progress_hud_nsn: ^0.5.1
+  pinput: ^6.0.2
   supabase_flutter: ^2.12.4
 
 dev_dependencies:

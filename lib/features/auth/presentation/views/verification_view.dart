@@ -1,3 +1,4 @@
+import 'package:auth/features/auth/presentation/views/widgets/verification_bloc_consumer.dart';
 import 'package:auth/features/auth/presentation/views/widgets/verofication_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,6 @@ class VerificationView extends StatelessWidget {
   static const routeName = 'verification view';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: VeroficationViewBody());
+    return Scaffold(body: VerificationBlocConsumer());
   }
 }
