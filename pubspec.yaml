@@ -32,6 +32,8 @@ dependencies:
   dartz: ^0.10.1
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_bloc: ^9.1.1
   get_it: ^9.2.1
   modal_progress_hud_nsn: ^0.5.1
@@ -78,3 +80,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_intl:
+  enabled: true
