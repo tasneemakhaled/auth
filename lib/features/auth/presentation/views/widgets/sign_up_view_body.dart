@@ -4,6 +4,7 @@ import 'package:auth/features/auth/presentation/views/login_view.dart';
 import 'package:auth/features/auth/presentation/views/widgets/custom_button.dart';
 import 'package:auth/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:auth/features/auth/presentation/views/widgets/password_field.dart';
+import 'package:auth/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,7 +33,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
             children: [
               SizedBox(height: 24),
               Text(
-                'SignUp',
+                S.of(context).signUp,
                 style: TextStyle(
                   color: AppColors.primaryColor,
                   fontSize: 40,
@@ -40,14 +41,14 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 ),
               ),
               CustomTextField(
-                hintText: 'Name',
+                hintText: S.of(context).name,
                 onSaved: (value) {
                   name = value!;
                 },
               ),
               SizedBox(height: 16),
               CustomTextField(
-                hintText: 'Email/Phone Number',
+                hintText: S.of(context).emailPhoneNumber,
                 onSaved: (value) {
                   email = value!;
                 },
@@ -60,7 +61,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               ),
               SizedBox(height: 16),
               CustomButton(
-                text: 'Creat Account',
+                text: S.of(context).creatAccount,
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
@@ -78,13 +79,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Do you have account? '),
+                  Text(S.of(context).dontHaveAccount),
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushNamed(LoginView.routeName);
                     },
                     child: Text(
-                      'Sign In',
+                      S.of(context).signInLink,
                       style: TextStyle(color: AppColors.primaryColor),
                     ),
                   ),

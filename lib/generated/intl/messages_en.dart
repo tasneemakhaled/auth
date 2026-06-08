@@ -21,5 +21,40 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "appName": MessageLookupByLibrary.simpleMessage("Auth App"),
+    "continueLabel": MessageLookupByLibrary.simpleMessage("Continue"),
+    "creatAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+    "didntGetOtp": MessageLookupByLibrary.simpleMessage("Didn\'t get OTP?"),
+    "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Do you have account?",
+    ),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have account?",
+    ),
+    "emailPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Email/Phone Number",
+    ),
+    "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
+    "enterOtpDescription": MessageLookupByLibrary.simpleMessage(
+      "Enter the OTP code we just sent you on your registered Email/Phone number",
+    ),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password"),
+    "forgetPasswordDescription": MessageLookupByLibrary.simpleMessage(
+      "Enter your registered email or phone number to reset your password",
+    ),
+    "forgetPasswordQuestion": MessageLookupByLibrary.simpleMessage(
+      "Forget Password?",
+    ),
+    "logIn": MessageLookupByLibrary.simpleMessage("Log In"),
+    "name": MessageLookupByLibrary.simpleMessage("Name"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "resendOtp": MessageLookupByLibrary.simpleMessage("Resend OTP"),
+    "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+    "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+    "signInLink": MessageLookupByLibrary.simpleMessage("Sign In"),
+    "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "signUpLink": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "submitting": MessageLookupByLibrary.simpleMessage("Submitting..."),
+  };
 }

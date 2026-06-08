@@ -1,4 +1,5 @@
 import 'package:auth/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:auth/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {
@@ -17,7 +18,7 @@ class _PasswordFieldState extends State<PasswordField> {
       obscureText: isObsure ? false : true,
       onSaved: widget.onSaved,
       keyboardType: TextInputType.visiblePassword,
-      hintText: 'password',
+      hintText: S.of(context).password,
       suffixIcon: GestureDetector(
         onTap: () {
           isObsure = !isObsure;

@@ -18,28 +18,35 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
-  static const AppLocalizationDelegate delegate =
-    AppLocalizationDelegate();
+  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name); 
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
- 
+
       return instance;
     });
-  } 
+  }
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null, 'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -49,32 +56,17 @@ class S {
 
   /// `Auth App`
   String get appName {
-    return Intl.message(
-      'Auth App',
-      name: 'appName',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Auth App', name: 'appName', desc: '', args: []);
   }
 
-  /// `SignIn`
+  /// `Sign In`
   String get signIn {
-    return Intl.message(
-      'SignIn',
-      name: 'signIn',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
   }
 
-  /// `SignUp`
+  /// `Sign Up`
   String get signUp {
-    return Intl.message(
-      'SignUp',
-      name: 'signUp',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
   }
 
   /// `Forget Password`
@@ -89,12 +81,7 @@ class S {
 
   /// `Enter OTP`
   String get enterOtp {
-    return Intl.message(
-      'Enter OTP',
-      name: 'enterOtp',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Enter OTP', name: 'enterOtp', desc: '', args: []);
   }
 
   /// `Reset Password`
@@ -117,40 +104,25 @@ class S {
     );
   }
 
-  /// `password`
+  /// `Password`
   String get password {
-    return Intl.message(
-      'password',
-      name: 'password',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Password', name: 'password', desc: '', args: []);
   }
 
   /// `Name`
   String get name {
-    return Intl.message(
-      'Name',
-      name: 'name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Name', name: 'name', desc: '', args: []);
   }
 
   /// `Log In`
   String get logIn {
-    return Intl.message(
-      'Log In',
-      name: 'logIn',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Log In', name: 'logIn', desc: '', args: []);
   }
 
-  /// `Creat Account`
+  /// `Create Account`
   String get creatAccount {
     return Intl.message(
-      'Creat Account',
+      'Create Account',
       name: 'creatAccount',
       desc: '',
       args: [],
@@ -158,13 +130,8 @@ class S {
   }
 
   /// `Continue`
-  String get continue {
-    return Intl.message(
-      'Continue',
-      name: 'continue',
-      desc: '',
-      args: [],
-    );
+  String get continueLabel {
+    return Intl.message('Continue', name: 'continueLabel', desc: '', args: []);
   }
 
   /// `Forget Password?`
@@ -199,22 +166,12 @@ class S {
 
   /// `Sign In`
   String get signInLink {
-    return Intl.message(
-      'Sign In',
-      name: 'signInLink',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sign In', name: 'signInLink', desc: '', args: []);
   }
 
   /// `Sign Up`
   String get signUpLink {
-    return Intl.message(
-      'Sign Up',
-      name: 'signUpLink',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sign Up', name: 'signUpLink', desc: '', args: []);
   }
 
   /// `Enter the OTP code we just sent you on your registered Email/Phone number`
@@ -239,12 +196,7 @@ class S {
 
   /// `Resend OTP`
   String get resendOtp {
-    return Intl.message(
-      'Resend OTP',
-      name: 'resendOtp',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Resend OTP', name: 'resendOtp', desc: '', args: []);
   }
 
   /// `Submitting...`

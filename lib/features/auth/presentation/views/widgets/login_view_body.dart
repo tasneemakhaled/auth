@@ -4,6 +4,7 @@ import 'package:auth/features/auth/presentation/views/forget_password_view.dart'
 import 'package:auth/features/auth/presentation/views/widgets/custom_button.dart';
 import 'package:auth/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:auth/features/auth/presentation/views/widgets/password_field.dart';
+import 'package:auth/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,7 +33,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             children: [
               SizedBox(height: 24),
               Text(
-                'SignIn',
+                S.of(context).signIn,
                 style: TextStyle(
                   color: AppColors.primaryColor,
                   fontSize: 40,
@@ -42,7 +43,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
 
               SizedBox(height: 16),
               CustomTextField(
-                hintText: 'Email/Phone Number',
+                hintText: S.of(context).emailPhoneNumber,
                 onSaved: (value) {
                   email = value!;
                 },
@@ -60,12 +61,12 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 },
                 child: Align(
                   alignment: Alignment.bottomRight,
-                  child: Text('Forget Password?'),
+                  child: Text(S.of(context).forgetPasswordQuestion),
                 ),
               ),
               SizedBox(height: 16),
               CustomButton(
-                text: 'Log In',
+                text: S.of(context).logIn,
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
@@ -83,9 +84,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Don’t have account? '),
+                  Text(S.of(context).dontHaveAccount),
                   Text(
-                    'Sign Up',
+                    S.of(context).signUpLink,
                     style: TextStyle(color: AppColors.primaryColor),
                   ),
                 ],
