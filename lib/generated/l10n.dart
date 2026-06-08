@@ -18,40 +18,253 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-      _current != null,
-      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
-    );
+    assert(_current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
-  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
+  static const AppLocalizationDelegate delegate =
+    AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
-
+ 
       return instance;
     });
-  }
+  } 
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(
-      instance != null,
-      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
-    );
+    assert(instance != null, 'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
+  }
+
+  /// `Auth App`
+  String get appName {
+    return Intl.message(
+      'Auth App',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SignIn`
+  String get signIn {
+    return Intl.message(
+      'SignIn',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SignUp`
+  String get signUp {
+    return Intl.message(
+      'SignUp',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password`
+  String get forgetPassword {
+    return Intl.message(
+      'Forget Password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter OTP`
+  String get enterOtp {
+    return Intl.message(
+      'Enter OTP',
+      name: 'enterOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email/Phone Number`
+  String get emailPhoneNumber {
+    return Intl.message(
+      'Email/Phone Number',
+      name: 'emailPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `password`
+  String get password {
+    return Intl.message(
+      'password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log In`
+  String get logIn {
+    return Intl.message(
+      'Log In',
+      name: 'logIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Creat Account`
+  String get creatAccount {
+    return Intl.message(
+      'Creat Account',
+      name: 'creatAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continue {
+    return Intl.message(
+      'Continue',
+      name: 'continue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password?`
+  String get forgetPasswordQuestion {
+    return Intl.message(
+      'Forget Password?',
+      name: 'forgetPasswordQuestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have account?`
+  String get dontHaveAccount {
+    return Intl.message(
+      'Don\'t have account?',
+      name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have account?`
+  String get doYouHaveAccount {
+    return Intl.message(
+      'Do you have account?',
+      name: 'doYouHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In`
+  String get signInLink {
+    return Intl.message(
+      'Sign In',
+      name: 'signInLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUpLink {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUpLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the OTP code we just sent you on your registered Email/Phone number`
+  String get enterOtpDescription {
+    return Intl.message(
+      'Enter the OTP code we just sent you on your registered Email/Phone number',
+      name: 'enterOtpDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Didn't get OTP?`
+  String get didntGetOtp {
+    return Intl.message(
+      'Didn\'t get OTP?',
+      name: 'didntGetOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend OTP`
+  String get resendOtp {
+    return Intl.message(
+      'Resend OTP',
+      name: 'resendOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submitting...`
+  String get submitting {
+    return Intl.message(
+      'Submitting...',
+      name: 'submitting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your registered email or phone number to reset your password`
+  String get forgetPasswordDescription {
+    return Intl.message(
+      'Enter your registered email or phone number to reset your password',
+      name: 'forgetPasswordDescription',
+      desc: '',
+      args: [],
+    );
   }
 }
 
@@ -59,7 +272,10 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+    ];
   }
 
   @override

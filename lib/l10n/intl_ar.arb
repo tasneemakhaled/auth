@@ -1,0 +1,33 @@
+{
+  "@@locale": "ar",
+
+  "appName": "تطبيق المصادقة",
+
+  "signIn": "تسجيل الدخول",
+  "signUp": "إنشاء حساب",
+  "forgetPassword": "نسيت كلمة المرور",
+  "enterOtp": "أدخل رمز التحقق",
+  "resetPassword": "إعادة تعيين كلمة المرور",
+
+  "emailPhoneNumber": "البريد الإلكتروني / رقم الهاتف",
+  "password": "كلمة المرور",
+  "name": "الاسم",
+
+  "logIn": "تسجيل الدخول",
+  "creatAccount": "إنشاء حساب",
+  "continue": "متابعة",
+
+  "forgetPasswordQuestion": "نسيت كلمة المرور؟",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "doYouHaveAccount": "هل لديك حساب؟",
+
+  "signInLink": "سجّل الدخول",
+  "signUpLink": "سجّل الآن",
+
+  "enterOtpDescription": "أدخل رمز التحقق الذي أرسلناه إلى بريدك الإلكتروني أو رقم هاتفك",
+  "didntGetOtp": "لم تستلم الرمز؟",
+  "resendOtp": "إعادة إرسال الرمز",
+
+  "submitting": "جارٍ الإرسال...",
+  "forgetPasswordDescription": "أدخل بريدك الإلكتروني أو رقم هاتفك المسجّل لإعادة تعيين كلمة المرور"
+}

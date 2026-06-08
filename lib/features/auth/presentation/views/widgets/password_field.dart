@@ -17,7 +17,7 @@ class _PasswordFieldState extends State<PasswordField> {
       obscureText: isObsure ? false : true,
       onSaved: widget.onSaved,
       keyboardType: TextInputType.visiblePassword,
-      hintText: 'كلمة المرور',
+      hintText: 'password',
       suffixIcon: GestureDetector(
         onTap: () {
           isObsure = !isObsure;

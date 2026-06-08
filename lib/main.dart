@@ -7,8 +7,10 @@ import 'package:auth/features/auth/presentation/view_models/cubits/ForgetPasswor
 import 'package:auth/features/auth/presentation/view_models/cubits/LogIn/login_cubit.dart';
 import 'package:auth/features/auth/presentation/view_models/cubits/SignUp/sign_up_cubit.dart';
 import 'package:auth/features/auth/presentation/views/sign_up_view.dart';
+import 'package:auth/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -32,6 +34,14 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        locale: Locale('en'),
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
         debugShowCheckedModeBanner: false,
         initialRoute: SignUpView.routeName,
         onGenerateRoute: onGenerateRoutes,

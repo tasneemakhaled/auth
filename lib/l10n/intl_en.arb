@@ -1,1 +1,33 @@
-{}
+{
+  "@@locale": "en",
+
+  "appName": "Auth App",
+
+  "signIn": "SignIn",
+  "signUp": "SignUp",
+  "forgetPassword": "Forget Password",
+  "enterOtp": "Enter OTP",
+  "resetPassword": "Reset Password",
+
+  "emailPhoneNumber": "Email/Phone Number",
+  "password": "password",
+  "name": "Name",
+
+  "logIn": "Log In",
+  "creatAccount": "Creat Account",
+  "continue": "Continue",
+
+  "forgetPasswordQuestion": "Forget Password?",
+  "dontHaveAccount": "Don't have account?",
+  "doYouHaveAccount": "Do you have account?",
+
+  "signInLink": "Sign In",
+  "signUpLink": "Sign Up",
+
+  "enterOtpDescription": "Enter the OTP code we just sent you on your registered Email/Phone number",
+  "didntGetOtp": "Didn't get OTP?",
+  "resendOtp": "Resend OTP",
+
+  "submitting": "Submitting...",
+  "forgetPasswordDescription": "Enter your registered email or phone number to reset your password"
+}
